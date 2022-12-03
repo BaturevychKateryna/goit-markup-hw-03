@@ -12,8 +12,6 @@ h1, h2, h3, p, ul {
     margin-bottom: 0px;
 }
 
-
-
 :root {
     --primary-text-color: #212121;
     --tittle-text-color: #757575;
@@ -35,29 +33,32 @@ body{
 .container {
     margin-left: auto;
     margin-right: auto;
-    width: 1230px;
     padding-left: 15px;
     padding-right: 15px;
-    outline: 2px solid tomato;
-
+    width: 1200px;
+}
+.images {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.section {
+    padding: 94px 0;
+}
+.no-padding {
+    padding-top: 0;
 }
 .list {
     list-style: none;
+    padding-left: 0;
 }
-
 .link {
     text-decoration: none;
 }  
 
-.img {
-    display: block;
-    max-width: 100%; 
-    height: auto;
-}
 /* Шапка */
 .header {
-    border: 1px solid var(--border-for-header-color);
-    
+    border-bottom: 1px solid var(--border-for-header-color);
 }
 .logo{
     color: var(--additional-text-color);
@@ -75,7 +76,6 @@ body{
     line-height: 1.14;
     letter-spacing: 0.02em;
 }
-
 .site-nav {
     display: flex;
     margin-left: 93px;
@@ -88,15 +88,12 @@ body{
 .site-nav .item + .item {
     margin-left: 50px;
 }
-
 .auth-nav .item + .item {
     margin-left: 40px;
 }
 .site-nav .link {
     display: block;
     padding: 32px 0;
-
-
     color: var(--primary-text-color);    
 }
 .site-nav .link:hover, .site-nav .link:focus {
@@ -118,30 +115,27 @@ body{
     display: flex;
     align-items: center;
 }
+
 /* Герой */
-
-
 .hero {
+    padding: 200px 0;
+    text-align: center;
     background-color: var(--background-color-gray);
     letter-spacing: 0.06em;
-    text-align: center;
 }
 .hero .hero-titlle {
+    text-transform: uppercase;
+    margin-bottom: 30px;
     color: var(--accent-color-white);
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-
-
 }
 .hero-button {
     display: inline;
+    padding: 10px 24px;
     min-width: 152px;
     border-radius: 4px;
-    padding: 10px 24px;
-    margin-bottom: 200px;
     cursor: pointer;
     color: var(--accent-color-white);
     background-color: var(--accent-color-blue);
@@ -155,11 +149,12 @@ body{
     background-color: #188CE8;
     color : rgba(0, 0, 0, 0.15);
 }
+
 /* Переваги */
 .position {
     display: flex;
+    gap: 30px;
 }
-
 .visually-hidden {
     position: absolute;
     white-space: nowrap;
@@ -170,7 +165,6 @@ body{
     clip-path: inset(50%);
     margin: -1px;
 }
-
 .section-text, .aside-text { 
     color: var(--tittle-text-color);
 }
@@ -185,7 +179,12 @@ body{
     font-size: 14px;
     line-height: 1.7;
 }
+
 /* Приклади робіт та Працівники*/
+.exemple {
+    display: flex;
+    gap: 30px;
+}
 .heading {
     padding-bottom: 50px;
     font-weight: 700;
@@ -194,10 +193,10 @@ body{
     text-align: center;
 }
 .aside-titlle {
+    margin-bottom: 10px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
-    margin-bottom: 10px;
 }
 .aside-text {
     font-size: 16px;
@@ -210,7 +209,15 @@ body{
     background-color: var(--accent-color-white);
     padding: 30px 0;
     width: 270px;
+    text-align: center;
+    border-radius: 0px 0px 4px 4px;
 }
+.team {
+    display: flex;
+    gap: 30px;
+
+}
+
 /* Футер */
 .footer {
     background-color: var(--background-color-gray);
@@ -221,9 +228,9 @@ body{
 }
 .footer-nav .adress {
     color: var(--accent-color-white);
-        font-size: 14px;
-        line-height: 1.71;
-        font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    font-style: normal;
 }
 .footer-nav .adress:hover,
 .footer-nav .adress:focus {
@@ -239,10 +246,12 @@ body{
 .footer-nav .contacts:focus {
     color: var(--accent-color-blue);
 }
+
 /* Додаткове оформлення для Портфоліо */
 /* Кнопки */
 .page .page-button {
     display: inline;
+    border: transparent;
     border-radius: 4px;
     padding: 6px 22px;
     cursor: pointer;
@@ -253,17 +262,19 @@ body{
     font-size: 16px;
     line-height: 1.63;
     text-align: center;
-    
 }
 .wrapper {
-    padding: 20px 0;
+    padding: 20px 24px;
 }
 .border {
     border: 1px solid var(--border-for-card-color);
-    width: 370px;
 }
-
-
+.page {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 50px;
+}
 .page .page-button:hover, .page .page-button:focus {
     color: var(--accent-color-white);
     background-color: var(--accent-color-blue);
@@ -271,14 +282,16 @@ body{
 .page .current {
     color: var(--accent-color-blue);
 }
+
 /* Герой Портфоліо */
 .blok .blok-titlle {
+    margin-bottom: 4px;
     color: var(--primary-text-color);
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
     text-decoration: none;
-    margin-bottom: 4px;
+    
 }
 .blok .blok-text {
     text-decoration: none;
@@ -286,23 +299,13 @@ body{
     font-size: 16px;
     line-height: 1.88;
 }
-
-.section {
-    padding: 94px 0;
-}
-.no-padding {
-    padding-top: 0;
-}
-
-.flex-container {
+.blok {
     display: flex;
     flex-wrap: wrap;
+    gap: 30px;
 }
 .flex-element {
-    margin-right: 30px;
-    margin-bottom: 30px;
-    
-    width: 370px;
+    width: calc((100% - 60px) / 3);
 }
 .flex-element :nth-child(3n) {
     margin-right: 0;
