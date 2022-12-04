@@ -78,7 +78,6 @@ body{
 }
 .site-nav {
     display: flex;
-    margin-left: 93px;
     padding-left: 0;
 }
 .auth-nav {
@@ -115,6 +114,9 @@ body{
     display: flex;
     align-items: center;
 }
+.nav-style { 
+    margin-left: 93px;
+}
 
 /* Герой */
 .hero {
@@ -125,7 +127,8 @@ body{
 }
 .hero .hero-titlle {
     text-transform: uppercase;
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
+    width: 696px;
     color: var(--accent-color-white);
     font-weight: 900;
     font-size: 44px;
@@ -134,7 +137,8 @@ body{
 .hero-button {
     display: inline;
     padding: 10px 24px;
-    min-width: 152px;
+    width: 200px;
+    border: none;
     border-radius: 4px;
     cursor: pointer;
     color: var(--accent-color-white);
@@ -147,7 +151,6 @@ body{
 }
 .hero-button:hover, .hero-button:focus {
     background-color: #188CE8;
-    color : rgba(0, 0, 0, 0.15);
 }
 
 /* Переваги */
@@ -165,11 +168,14 @@ body{
     clip-path: inset(50%);
     margin: -1px;
 }
+.advantage-style {
+    width: 270px;
+}
 .section-text, .aside-text { 
     color: var(--tittle-text-color);
 }
 .section-titlle {
-    padding-bottom: 10px;
+    margin-bottom: 10px;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -186,7 +192,7 @@ body{
     gap: 30px;
 }
 .heading {
-    padding-bottom: 50px;
+    margin-bottom: 50px;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
@@ -215,13 +221,16 @@ body{
 .team {
     display: flex;
     gap: 30px;
-
 }
 
 /* Футер */
 .footer {
     background-color: var(--background-color-gray);
     padding: 60px 0;
+}
+.retreat {
+    display: block ;
+    margin-bottom: 28px;
 }
 .footer .logo {
     color: var(--accent-color-white);
@@ -246,7 +255,12 @@ body{
 .footer-nav .contacts:focus {
     color: var(--accent-color-blue);
 }
-
+.footer-style {
+    margin-bottom: 12px;
+}
+.no-margin {
+    margin-bottom: 0;
+}
 /* Додаткове оформлення для Портфоліо */
 /* Кнопки */
 .page .page-button {
@@ -280,7 +294,8 @@ body{
     background-color: var(--accent-color-blue);
 }
 .page .current {
-    color: var(--accent-color-blue);
+    color: var(--background-color-for-button);
+    background-color: var(--accent-color-blue);
 }
 
 /* Герой Портфоліо */
@@ -309,7 +324,4 @@ body{
 }
 .flex-element :nth-child(3n) {
     margin-right: 0;
-}
-.flex-element :nth-last-child(-n+3) {
-    margin-bottom: 0;
 }
